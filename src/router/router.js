@@ -1,8 +1,6 @@
 import loginView from "../views/loginView";
 import homeView from "../views/homeView";
 import { isAuthenticated } from "../utils";
-import { Sidebar } from "../components/Sidebar";
-import { ReservationCard } from "../components/ReservationCard";
 const routes = {
   "/": loginView,
   "/home": homeView,
