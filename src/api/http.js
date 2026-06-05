@@ -9,7 +9,7 @@ const request = async (
       `${API_URL}${endpoint}`,
       {
         headers: {
-          "Content-Type": "application/db.json",
+          "Content-Type": "application/json",
         },
         ...options,
       }
