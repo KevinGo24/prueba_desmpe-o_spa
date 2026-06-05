@@ -5,7 +5,7 @@ import { getSession } from "../utils.js";
 export const homeController = async () => { 
   const container = document.querySelector("#reservationsContainer"); 
   
-  if (!container) return; // Buena práctica para evitar errores si el contenedor no existe en el DOM
+  if (!container) return; 
 
   const user = getSession(); 
   const reservations = await getReservation(); 

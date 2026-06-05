@@ -1,7 +1,8 @@
 import { saveSession } from "@/utils";
 import { navigateTo } from "@/router/router";
 import { http } from "@/api/http";
-export const loginController = () => {
+import { homeController } from "./home.controller";
+export const loginController = (email,password) => {
   const form = document.querySelector("#loginForm");
 
   form.addEventListener("submit", async (e) => {
@@ -9,17 +10,23 @@ export const loginController = () => {
 
     const email = form.email.value.trim();
     const password = form.password.value;
+    const users = response.data
 
     try {
-      const users = await http.post(
-        `/users?email=${email}&password=${password}`,
+      const users = await http.get(
+        `/users?email=${email}&
+        password=${password}`,
       );
 
-      if (!email || !password) {
-        alert("Credenciales incorrectas");
+      if (!email.lenght ==0) {
+        throw new Error ('verificar credenciales');
         return;
       }
-
+      const user = users[0]
+      if (users.password.trim() !== password.trim()) {
+        throw new Error ('verificar credenciales');
+      }
+      return user
       saveSession({
         id: users[0].id,
         name: users[0].name,
