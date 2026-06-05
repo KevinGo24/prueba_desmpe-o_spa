@@ -1,7 +1,6 @@
 import { saveSession } from "@/utils";
 import { navigateTo } from "@/router/router";
 import { http } from "@/api/http";
-
 export const loginController = () => {
   const form = document.querySelector("#loginForm");
 
@@ -12,7 +11,7 @@ export const loginController = () => {
     const password = form.password.value;
 
     try {
-      const users = await http.get(
+      const users = await http.post(
         `/users?email=${email}&password=${password}`,
       );
 
