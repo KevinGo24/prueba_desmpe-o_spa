@@ -80,3 +80,26 @@ user@test.com
 └── vite.config.js
 
 ```
+## Environment Setup
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run project:
+
+```bash
+npm run dev
+```
+
+This command simultaneously launches:
+
+- Vite
+- JSON Server
+
+thanks to the use of Concurrently.
+
+
+--
