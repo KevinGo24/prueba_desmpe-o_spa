@@ -9,7 +9,7 @@ export const loginController = () => {
     e.preventDefault();
 
     const email = form.email.value.trim();
-    const password = form.password.value.trim();
+    const password = form.password.value;
 
     try {
       const users = await http.get(
