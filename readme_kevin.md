@@ -4,6 +4,29 @@
 
 This is a project for a venue booking company using the single page application methodology, which includes a login for users to register with their credentials and a dashboard for managing venue bookings.
 
+### Administrator (admin)
+
+Can:
+
+- View all reservations
+- Create reservations
+- Edit reservations
+- Delete reservations
+- Approve or reject reservations
+- Manage workspaces
+- Access administrative modules
+
+### User (user)
+
+Can:
+
+- Check available spaces
+- Create reservations
+- View only their own reservations
+- Modify pending reservations
+- Cancel their own reservations
+
+---
 
 ``` text
   .
