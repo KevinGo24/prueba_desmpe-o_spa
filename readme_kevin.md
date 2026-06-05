@@ -28,6 +28,24 @@ Can:
 
 ---
 
+## Credentials
+
+Administrator:
+
+```txt
+admin@test.com
+123456
+```
+
+User:
+
+```txt
+user@test.com
+123456
+```
+
+---
+
 ``` text
   .
 ├── db.json
